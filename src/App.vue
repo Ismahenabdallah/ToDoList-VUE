@@ -1,11 +1,22 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <Header/>
+  
   </div>
   <router-view />
 </template>
-
+<script>
+// @ is an alias to /src
+//import SideBars from "./components/SideBar.vue";
+import Header from "./components/Header.vue";
+export default {
+  name: "App",
+  components: {
+ //   SideBars ,
+     Header
+  }
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -13,6 +24,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
 }
 
 #nav {
